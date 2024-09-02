@@ -166,3 +166,94 @@ let discount = purchaseAmount >= 100 ? 23 : 0;
 console.log(`Your total prise including discount: $${purchaseAmount - purchaseAmount * (discount / 100)}`);
 
 //Switches--------------------------
+let testScore = 50;
+let grade;
+    switch(true){
+        case testScore >= 90:
+            grade = "A";
+            break
+        case testScore >= 80:
+            grade = "B";
+            break
+        case testScore >= 70:
+            grade = "C";
+            break
+        case testScore >= 60:
+            grade = "D";
+            break
+        default:
+            grade = "F";
+    }
+console.log(`Your grade is ${grade}`);
+
+//String methods--------------------------
+const name_0 = "Example---Name"
+
+console.log(name_0.charAt(0) )
+console.log(name_0.toLowerCase());
+console.log(name_0.toUpperCase());
+console.log(name_0.repeat(3));
+console.log(name_0.padStart(15, "0"))
+console.log(name_0.padEnd(15, "0"));
+console.log(name_0.replaceAll('-', '/'));
+console.log(name_0.indexOf('a'));
+console.log(name_0.lastIndexOf('a'));
+console.log(name_0.trim());
+console.log(name_0.length);
+
+let exam_name_0 = name_0.startsWith(' ');
+if(exam_name_0){
+    console.log('Your name can`t start with " "');
+}else {
+    console.log(name_0);
+}
+
+let exam_name_1 = name_0.endsWith(' ');
+if(exam_name_1){
+    console.log('Your name can`t end with " "');
+}else {
+    console.log(name_0);
+}
+
+let exam_name_2 = name_0.includes(' ');
+if(exam_name_2){
+    console.log('Your name can`t include " "');
+}else {
+    console.log(name_0);
+}
+
+
+//String slicing--------------------------
+const full_name = 'Hockey player';
+
+let first_name = full_name.slice(0, full_name.indexOf(' ') + 1);
+let last_name = full_name.slice(-6);
+
+console.log(first_name);
+console.log(last_name);
+
+//Method chaining--------------------------
+
+//No method ----
+
+let userName_0 = window.prompt('Enter your username: ');
+userName_0 = userName_0.trim();
+let letter = userName_0.charAt(0);
+letter = letter.toUpperCase();
+
+let extraChar = userName_0.slice(1);
+extraChar = extraChar.toLowerCase();
+userName_0 = letter + extraChar;
+console.log(userName_0);
+
+//Method chaining--------------------------
+
+/*let var_0 = 'First Name';
+let var_1 = 'Last Name';
+
+console.log(var_0.trim().charAt(0).toUpperCase() + var_1.trim().charAt(0).toLowerCase());
+
+let var0 = prompt('Please enter a name');
+let resultOfVar0 = '';*/
+
+
