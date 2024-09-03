@@ -246,14 +246,106 @@ extraChar = extraChar.toLowerCase();
 userName_0 = letter + extraChar;
 console.log(userName_0);
 
-//Method chaining--------------------------
+//Method chaining ----
 
-/*let var_0 = 'First Name';
-let var_1 = 'Last Name';
+let greetingMessage0 = window.prompt("Please enter your name")
 
-console.log(var_0.trim().charAt(0).toUpperCase() + var_1.trim().charAt(0).toLowerCase());
+console.log(greetingMessage0.trim().charAt(0).toUpperCase() + greetingMessage0.trim().slice(1).toLowerCase());
 
-let var0 = prompt('Please enter a name');
-let resultOfVar0 = '';*/
+// Logical operators--------------------------
+// && - and
+// || - or
+// ! - not
+
+let temp = 20;
+if (temp > 10 && temp <= 25 && temp !== 20) {
+    console.log('The weather is GOOD!')
+}else {
+    console.log('The weather is NOT GOOD!')
+}
+
+let isRainy = false;
+if(!isRainy){
+    console.log('The weather is NOT Rainy!')
+}else {
+    console.log('The weather is Rainy!')
+}
+
+//Strict equality--------------------------
+// = assignment operator
+// == comparison operator (compare if values are equal)
+// === strict equality operator (compare if values && datatype are equal)
+// != inequality operator
+// !== strict inequality operator
+
+const PI = '3.14';
+if(PI !== 3.14){
+    console.log('It`s NOT PI')
+}else {
+    console.log('It`s PI!')
+}
+
+//While loops, Do while loops--------------------------
+
+let hey= prompt("How are you?");
+
+while (hey === "" || hey === null){
+    hey = window.prompt('Enter correct VALUE');
+}
+console.log(`${hey}, cool me too`);
+
+const loggedIn = true;
+let email;
+let password;
+do {
+    password = prompt('Enter your Password');
+    email = prompt('Enter your Email');
+    if(password === 'MyPass' && email === 'MyMail'){
+        console.log('You are logged in!')
+    }else {
+        alert('Invalid credentials');
+        console.log('Invalid credentials');
+    }
+} while (!loggedIn);
+
+//For loops--------------------------
+
+for(i = 0; i < 10; i++ ){
+    if(i === 7){
+        continue
+        //break
+    }
+    console.log(i)
+}
+
+//Number guessing game--------------------------
+let min_num = 1;
+let max_num = 100;
+let rdmNum = Math.floor(Math.random() * (max_num + 1)) + min_num;
+let attempts = 0;
+let guessing;
+let running = true;
+
+while(running){
+    guessing = window.prompt(`Try to guess a number between ${min_num} - ${max_num}`);
+    guessing = Number(guessing)
+    if(isNaN(guessing)){
+        window.alert(`Please enter a VALID number`)
+    }else if(guessing < min_num || guessing > max_num){
+        window.alert(`Enter enter a VALID number`)
+    }
+    else {
+        attempts++;
+        if (guessing < rdmNum) {
+            window.alert(`Too LOW try agan`)
+        } else if (guessing > rdmNum) {
+            window.alert(`Too HIGH try agan`)
+        } else {
+            window.alert(`You are Correct! The answer is ${rdmNum}. It took you a ${attempts} attempts!`);
+            running = false;
+        }
+    }
+}
+
 
 
