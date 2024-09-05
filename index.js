@@ -1,6 +1,6 @@
 //Accept user input--------------------------
 
-let username;
+/*let username;
 
 document.getElementById('buttonSubmit').onclick = function (){
     username = document.getElementById('usernameInput').value;
@@ -346,6 +346,176 @@ while(running){
         }
     }
 }
+
+//Functions--------------------------
+
+function isEven(number) {
+    return number % 2 === 0;
+}
+
+console.log(isEven(34));
+
+function validEmail(email){
+    return email.includes('@');
+}
+console.log(validEmail('Blablafake.com'));
+
+function divide(x, y){
+    return x / y;
+}
+console.log(divide(45, 13));
+
+function multiply(x, y){
+    return x * y;
+}
+console.log(multiply(97, 16))
+
+//Variable scope--------------------------
+
+let xy = 4;
+
+function function1(){
+    let xy = 3;
+    console.log(xy);
+}
+function1();*/
+
+//Temperature conversion program--------------------------
+const tempConvertInput = document.getElementById('tempConvertInput');
+const radioBtn1 = document.getElementById('radioBtn1');
+const radioBtn2 = document.getElementById('radioBtn2');
+const resultOfTempConv = document.getElementById('resultOfTempConv');
+let tempFnc;
+
+function convert() {
+
+    if (radioBtn1.checked) {
+        tempFnc = Number(tempConvertInput.value);
+        tempFnc = (tempFnc - 32) * (5 / 9);
+        resultOfTempConv.textContent = tempFnc.toFixed(1) + '°C';
+    } else if (radioBtn2.checked) {
+        tempFnc = Number(tempConvertInput.value);
+        tempFnc = tempFnc * 9 / 5 + 32;
+        resultOfTempConv.textContent = tempFnc.toFixed(1) + '°F';
+    } else {
+        resultOfTempConv.textContent = 'Select a unit!'
+    }
+}
+
+//Arrays--------------------------
+
+let fruits = ['mango', 'apple', 'banana', 'melon'];
+
+console.log(fruits.pop());
+
+fruits.push('pineapple')
+console.log(fruits);
+
+fruits.unshift('coconut');
+console.log(fruits);
+
+fruits.shift();
+console.log(fruits);
+
+let numOfFruits = fruits.length;
+console.log(numOfFruits);
+
+console.log(`Second element of Array: ` + fruits[1]);
+
+for (let i = 0; i < fruits.length; i += 2) {
+    console.log(fruits[i]);
+}
+for (let i = fruits.length - 1; i >= 0; i--) {  // .length -1;  it's because of length starting from 0 in Arrays
+    console.log(fruits[i]);
+}
+console.log(fruits.indexOf('mango'))
+for (let fruit of fruits) {
+    console.log(fruit);
+}
+let indexOfFruits = fruits.indexOf('Fruit'); //it`s appeared -1, because this element doesn't exist.
+console.log(indexOfFruits);
+
+fruits.sort()  //in alphabetical order
+console.log(fruits);
+
+fruits.sort().reverse()
+console.log(fruits);
+
+//Spread operator--------------------------
+
+let somevar = 'Full Name';
+let somevar1 = [...somevar].join('/')
+let somevar2 = Math.max(...somevar) // NaN
+console.log(somevar2);
+
+let arrOfNum = [1, 2, 3, 4, 5, 6, 7];
+let arrOfNum1 = Math.max(...arrOfNum);
+let arrOfNum2 = Math.min(...arrOfNum);
+console.log(arrOfNum1);
+console.log(arrOfNum2);
+
+let newFruits = [...fruits].join(' & ');
+console.log(newFruits);
+
+let newFruits1 = [...fruits];  //that is identical
+let vegetables = ['celery', 'carrot', 'potatoes'];
+
+let food = [...fruits, ...vegetables, 'egs', 'milk'];
+console.log(food);
+
+//Rest parameters-------------------------- Allow a function work with a variable number of arguments by bundling them into in an array
+
+function spread(...string1) {
+    console.log(string1);
+}
+
+//let string1 = spread('Mr', 'Mark', 'Andre', 'ψϡϠ')
+spread('Mr', 'Mark', 'Andre', 'ψϡϠ');
+
+function sumOfRest(...numbers) {
+    let result = 0;
+    for (let number of numbers) {
+        result += number;
+    }
+    return result;
+}
+
+let total = sumOfRest(1, 3, 60, 24);
+console.log(`Your total: €${total}`);
+
+
+function newSpreadFnc(...numbers) {
+    let result = 0;
+    for (let number of numbers) {
+        result += number;
+    }
+    return result / numbers.length;
+}
+
+let someVar_1 = newSpreadFnc(3, 43, 4, 324, 4, 22, 34)
+
+console.log(`Averege value: ${someVar_1}`)
+
+function openFrig(...foods){
+    return foods;
+}
+const food1 = 'foodItem1';
+const food2 = 'foodItem2';
+const food3 = 'foodItem3';
+const food4 = 'foodItem4';
+
+let foodItems = openFrig(food1, food2, food3, food4);
+
+console.log(...foodItems);
+
+
+
+
+
+
+
+
+
 
 
 

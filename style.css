@@ -1,3 +1,6 @@
+body{
+    background-color: #eaeaea;
+}
 #mainText {
     text-align: center;
     font-size: 10em;
@@ -66,4 +69,57 @@
 /*-------------------------------------------------------------*/
 #checkedPropertyForm {
     font-family: Verdana sans-serif;
+}
+
+/*-------------------------------------------------------------*/
+#tempConvProg {
+    text-align: center;
+    background-color: white;
+    color: black;
+    max-width: 350px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    font-family: Candara;
+    box-shadow: #6e6e6e 5px 5px 15px;
+}
+
+#h1TempConv{
+    color: #1e4070;
+    margin: 5px 10px;
+    font-weight: bold;
+}
+#tempConvertInput{
+    border: 1px solid #cfcfcf;
+    border-radius: 5px;
+    margin: 10px;
+    width: 50%;
+    font-size: 2em;
+    text-align: center;
+}
+.labelTempConv{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+#tempConvBtn{
+    font-size: 1.5em;
+    border-radius: 5px;
+    background-color: #124970;
+    margin-top: 15px;
+    color: white;
+    padding: 5px 10px;
+    transition: background-color 0.12s;
+}
+#tempConvBtn:hover{
+    background-color: #05375a;
+}
+
+#resultOfTempConv{
+    color: black;
+    font-size: 1.75em;
+    font-weight: bold;
+    margin-top: 15px;
 }
