@@ -381,6 +381,7 @@ function function1(){
 function1();*/
 
 //Temperature conversion program--------------------------
+/*
 const tempConvertInput = document.getElementById('tempConvertInput');
 const radioBtn1 = document.getElementById('radioBtn1');
 const radioBtn2 = document.getElementById('radioBtn2');
@@ -462,10 +463,11 @@ let vegetables = ['celery', 'carrot', 'potatoes'];
 
 let food = [...fruits, ...vegetables, 'egs', 'milk'];
 console.log(food);
+*/
 
 //Rest parameters-------------------------- Allow a function work with a variable number of arguments by bundling them into in an array
 
-function spread(...string1) {
+/*function spread(...string1) {
     console.log(string1);
 }
 
@@ -506,9 +508,26 @@ const food4 = 'foodItem4';
 
 let foodItems = openFrig(food1, food2, food3, food4);
 
-console.log(...foodItems);
+console.log(...foodItems);*/
+
+//Dice roller game--------------------------
+function rollDiceGame() {
+
+    const inputOfDiceRollGame = document.getElementById('inputOfDiceRollGame').value;
+    const resultOfDiceNumber = document.getElementById('resultOfDiceNumber');
+    const resultOfImage = document.getElementById('resultOfImage');
+    let values = [];
+    let images = [];
 
 
+    for (let i = 0; i < inputOfDiceRollGame; i++) {
+        const randomDiceNumber = Math.floor((Math.random() * 6) + 1);
+        values.push(randomDiceNumber);
+        images.push(`<img src="images/${randomDiceNumber}.svg" alt="Dice ${randomDiceNumber}">`);
+    }
+    resultOfDiceNumber.textContent = `Result: ${values.join(', ')}`
+    resultOfImage.innerHTML = images.join(' ')
+}
 
 
 

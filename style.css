@@ -123,3 +123,48 @@ body{
     font-weight: bold;
     margin-top: 15px;
 }
+/*--------------------------------------------------------------------------*/
+#containerOfDiceRollGame{
+    text-align: center;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 1.2rem;
+    max-width: 450px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: #102643 5px 5px 15px;
+}
+#h1ofDiceRollGame{
+    color:#1e4070
+}
+#inputOfDiceRollGame{
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #f3f3f3;
+    max-width: 100px;
+}
+#rollDiceBtn{
+    background-color: #1e4070;
+    border-radius: 10px;
+    padding: 5px 10px;
+    transition: background-color 0.12s;
+    font-size: 1.2rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+#rollDiceBtn:hover{
+    background-color: #022239;
+    box-shadow: #1e4070 0 0 5px;
+}
+#rollDiceBtn:active{
+    background-color: #011629;
+    box-shadow: #1e4070 1px 1px 10px;
+}
+#resultOfImage img{
+    width: 120px;
+}
