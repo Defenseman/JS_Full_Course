@@ -529,12 +529,197 @@ function rollDiceGame() {
     resultOfImage.innerHTML = images.join(' ')
 }
 
+//Generate Random Password--------------------------
+
+function randomPassword(length, lowerCase, upperCase, symbols, numbers) {
+    const includesLowerCase = 'qwertyuiopasdfghjklzxcvbnm';
+    const includesUpperCase = 'QWERTYUIOPASDFGHJKLZXCVBNM';
+    const includesSymbols = '!@#$%^&*()_+-='
+    const includesNumbers = '0123456789';
+
+    let allowedChars = '';
+    let password = '';
+
+    allowedChars += lowerCase ? includesLowerCase : '';
+    allowedChars += upperCase ? includesUpperCase : '';
+    allowedChars += symbols ? includesSymbols : '';
+    allowedChars += numbers ? includesNumbers : '';
+
+    if (length <= 0) {
+        return `Your password must be contain at least 1 character`
+    }
+    if (allowedChars.length === 0) {
+        return `Your password must be contain at least 1 set of characters`
+    }
+    for (let i = 0; i < length; i++) {
+        const someIndex = Math.floor(Math.random() * allowedChars.length);
+        password += allowedChars[someIndex];
+    }
+    return password
+}
+
+const passwordLength = 8;
+const includesLowerCase = true;
+const includesUpperCase = true;
+const includesSymbols = true;
+const includesNumbers = true;
+
+let generatedPassword = randomPassword(passwordLength, includesLowerCase, includesUpperCase, includesSymbols, includesNumbers);
+
+console.log(`Your generatedPassword: ${generatedPassword}`);
+
+//Callbacks--------------------------
+hello(wait);
+
+function hello(callback) {
+    console.log('Hello!');
+    callback();
+}
+
+function morning() {
+    console.log('Morning!');
+}
+
+function wait() {
+    console.log('Wait!');
+}
+
+function bye() {
+    console.log('Bye!')
+}
+
+//---
+sumNumbers(displayDOM, 3, 4)
+
+function sumNumbers(q, x, y) {
+    let result = x + y;
+    q(result);
+}
+
+function resultFunction(result) {
+    console.log(result);
+}
+
+function displayDOM(result) {
+    document.getElementById('myH2').textContent = result;
+}
+
+//forEach()--------------------------
+let someArr = [1, 2, 3, 4, 5];
+
+someArr.forEach(cube)
+//someArr.forEach(double)
+someArr.forEach(equation)
+
+function equation(arr) {
+    console.log(arr);
+}
+
+function double(element, index, array) {
+    array[index] = element * 2
+}
+
+function triple(element, index, array) {
+    array[index] = element * 3
+}
+
+function square(element, index, array) {
+    array[index] = Math.pow(element, 2)
+}
+
+function cube(element, index, array) {
+    array[index] = Math.pow(element, 3)
+}
+
+//---
+const fruit = ['apple', 'banana', 'orange', 'melon'];
+
+fruit.forEach(firstLetterUpperCase)
+fruit.forEach(showArray)
 
 
+function showArray(element) {
+    console.log(element)
+}
 
+function toUpperCase(element, index, array) {
+    array[index] = element.toUpperCase();
+}
 
+function firstLetterUpperCase(element, index, array) {
+    array[index] = element.charAt(0).toUpperCase() + element.slice(1);
+}
 
+//map()--------------------------
+const students = ['spongebob', 'patrik', 'squidward', 'sandy']
 
+function upperCase(str) {
+    return str.toUpperCase()
+}
 
+function firstLatterUp(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+const newStudents = students.map(upperCase)
+console.log(newStudents)
+
+const newSt = students.map(firstLatterUp)
+console.log(newSt)
+//---
+const datesArr = ['2000-01-24', '2007-09-1', '2024-05-24'];
+
+function formedData(arr){
+    const newArr = arr.split('-')
+    return `${newArr[2]}_${newArr[1]}_${newArr[0]}`
+}
+
+const formed = datesArr.map(formedData);
+console.log(formed);
+
+//Filter()--------------------------
+const isOddOrEven = [1, 2, 3, 4, 5, 6, 7];
+const isOddVar = isOddOrEven.filter(isOdd)
+const isEvenVar = isOddOrEven.filter(isEven)
+
+console.log(isOddVar)
+console.log(isEvenVar)
+
+function isOdd(el) {
+    return el % 2 !== 0;
+}
+function isEven(el) {
+    return el % 2 === 0;
+}
+
+const peoplesAge = [13, 14, 15, 16, 18, 19, 20, 12, 27];
+const adultsAge = peoplesAge.filter(isAdult)
+const minorAge = peoplesAge.filter(isMinor)
+
+console.log(adultsAge)
+console.log(minorAge)
+
+function isAdult(age){
+    return age >= 18;
+}
+function isMinor(age){
+    return age < 18;
+}
+
+const basketOFFruit = ['apple', 'banana', 'orange', 'melon', 'watermelon'];
+const shortFruits = basketOFFruit.filter(short)
+const longFruits = basketOFFruit.filter(long)
+
+console.log(shortFruits)
+console.log(longFruits)
+
+function short(el){
+    return el.length <= 6;
+}
+function long(el){
+    return el.length >= 6;
+}
+
+//reduce()--------------------------
 
 
