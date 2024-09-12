@@ -1,3 +1,10 @@
+/*
+@font-face {
+    src: url("fonts/Roboto");
+}
+*/
+
+
 body{
     background-color: #eaeaea;
 }
@@ -167,4 +174,187 @@ body{
 }
 #resultOfImage img{
     width: 120px;
+}
+
+.float{
+    display: flow-root;
+    margin-top: 10px;
+}
+.float img{
+    width: 150px;
+}
+
+.float_img1 {
+    float: left;
+    margin-right: 10px;
+}
+.float_img2{
+    float: right;
+    margin-left: 10px;
+}
+.overflow{
+    border: 2px solid black;
+    overflow: hidden;
+    height: 75px;
+    overflow-clip-margin: 10px;
+}
+#positionBox1{
+    height: 100px;
+    width: 100px;
+    background-color: #1e4070;
+    position: fixed;
+    top: 0;
+}
+.positionBox2{
+    height: 50px;
+    width: 50px;
+    background-color: #e11717;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+
+/* combinator — explains the relationship between listed selectors.
+      descendant
+    > child
+    ~ general sibling
+    + adjacent sibling */
+#combinators ~ p {
+    background-color: #1e4070;
+}
+
+#googleLink {
+    background-color: #249e24;
+    padding: 2px 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.2s;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#googleLink:hover {
+    background-color: #066506;
+    box-shadow: #ff8c8c 1px 1px 15px, #ff8c8c -1px -1px 15px, #ff8c8c 1px -1px 15px, #ff8c8c -1px 1px 15px;
+    color: white;
+    font-size: 1.1em;
+}
+#googleLink:active {
+    background-color: #042004;
+    color: #124970;
+    border: 2px dotted #249e24;
+}
+#ulHover li:hover {
+    background-color: #faff5e;
+}
+#ulHover li:not(:hover) {
+    background-color: #858585;
+}
+#ulHover li:nth-child(even){
+    background-color: #e49006;
+}
+
+.hoverDiv {
+    margin-bottom: 20px;
+
+}
+.hoverDiv p{
+    background-color: #4785e1;
+    padding: 10px;
+    display: none;
+}
+.hoverDiv:hover p {
+    display: block;
+    width: 100px;
+    text-shadow: yellow 3px 3px 5px;
+    text-align: center;
+    color: white;
+}
+.pseudoElements::first-letter {
+    font-size: 2em;
+    color: #ffa81a;
+    font-family: "Felix Titling", sans-serif;
+}
+
+.pseudoElementP::selection {
+    background-color: #572173;
+    color: white;
+}
+.pseudoElementP::first-line {
+    background-color: #ffff62;
+}
+
+.pseudoElementUl li::before {
+    content:"✅" ;
+}
+.pseudoElementUl li:last-of-type::after{
+    content: "🥭"
+}
+.pseudoElementUl li:first-of-type::after{
+    content: "🍎";
+}
+.pseudoElementUl li:nth-last-child(2)::after{
+    content: "🍌";
+}
+.pseudoElementUl li:nth-last-child(3)::after{
+    content: "🍊";
+}
+
+.pagination {
+    text-align: center;
+}
+.pagination a{
+    text-align: center;
+    color: black;
+    display: inline-block;
+    padding: 6px;
+    text-decoration: none;
+    margin-left: 3px;
+}
+.pagination a.active{
+    background-color: #249e24;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    border-radius: 5px;
+    padding: 4px 6px;
+}
+.pagination a:hover:not(.active){
+    background-color: #8c8c8c;
+    color: black;
+    font-size: 1em;
+    border-radius: 5px;
+}
+.dropdownMenu {
+    display: inline-block;
+}
+.fruitsBtn {
+    background-color: #9a9a9a;
+    font-size: 1.2em;
+    padding: 4px 7px;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+.contentMenu a {
+    display: block;
+    padding: 4px 7px;
+    text-decoration: none;
+    color: white;
+}
+.dropdownMenu .contentMenu {
+    position: absolute;
+    background-color: #9a9a9a;
+    box-shadow: 5px 5px 10px rgba(34, 34, 34, 0.84);
+    display: none;
+    min-width: 100px;
+}
+.dropdownMenu:hover .contentMenu {
+    display: block;
+}
+.dropdownMenu:hover {
+    background-color: #858585;
+}
+.dropdownMenu a:hover {
+    background-color: #858585;
 }

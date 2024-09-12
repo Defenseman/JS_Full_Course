@@ -721,5 +721,8 @@ function long(el){
 }
 
 //reduce()--------------------------
+const forbtn = () => {
+    document.getElementById('educationP').textContent = 'GoodBye'
 
+}
 
