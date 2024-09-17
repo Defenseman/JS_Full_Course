@@ -7,6 +7,7 @@
 
 body{
     background-color: #eaeaea;
+    margin: 0px;
 }
 #mainText {
     text-align: center;
@@ -325,36 +326,78 @@ body{
     font-size: 1em;
     border-radius: 5px;
 }
-.dropdownMenu {
-    display: inline-block;
-}
 .fruitsBtn {
-    background-color: #9a9a9a;
-    font-size: 1.2em;
-    padding: 4px 7px;
+    background-color: #919191;
     border: none;
-    cursor: pointer;
+    padding: 5px 10px;
     color: white;
+    border-radius: 2px 2px 0 0;
 }
 .contentMenu a {
     display: block;
-    padding: 4px 7px;
     text-decoration: none;
     color: white;
+    background-color: #919191;
+    transition: 0.2s ease;
+    padding: 10px;
 }
-.dropdownMenu .contentMenu {
-    position: absolute;
-    background-color: #9a9a9a;
-    box-shadow: 5px 5px 10px rgba(34, 34, 34, 0.84);
+.contentMenu {
     display: none;
+    position: absolute;
     min-width: 100px;
+    box-shadow: #252525 5px 5px 10px;
+
 }
-.dropdownMenu:hover .contentMenu {
+.dropdownMenu:hover .contentMenu{
     display: block;
 }
-.dropdownMenu:hover {
-    background-color: #858585;
+.dropdownMenu {
+    display: inline-block;
 }
-.dropdownMenu a:hover {
-    background-color: #858585;
+.contentMenu a:hover  {
+    background-color: #a3a3a3;
+}
+#navMenu {
+    margin: 0;
+
+}
+#navMenu h2{
+    text-align: center;
+}
+
+#navNav ul{
+    list-style-type: none;
+    background-color: #6e6e6e;
+    overflow: hidden;
+    color: white;
+}
+#navNav ul li {
+    float: left;
+    padding: 10px 20px;
+    transition: background-color 0.2s;
+}
+#navNav ul li:hover {
+    background-color: #434343;
+}
+.dropdownMenu2 {
+    display: none;
+    position: absolute;
+    margin: 35px 6px;
+    background-color: #6e6e6e;
+    min-width: 100px;
+}
+.dropdownMenu2 a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+}
+#navNav:hover .dropdownMenu2{
+    display: block;
+}
+.dropdownMenu2 a:hover {
+    background-color: #434343;
+}
+#navMenu {
+    margin-bottom: 30px;
 }
