@@ -8,11 +8,11 @@
 <body>
 
 <div id="calculator">
-    <input id="display" readonly>
+    <input id="display" readonly value="0">
 
     <div id="buttonsContainer">
-        <button onclick=clear() class="upperContr">AC</button>
-        <button onclick=append('+/-') class="upperContr">+/-</button>
+        <button onclick=clearDisplay() class="upperContr" id="clearBtn">AC</button>
+        <button onclick=change() class="upperContr">+/-</button>
         <button onclick=append('%') class="upperContr">%</button>
         <button onclick=append('/') class="sideContr">÷</button>
         <button onclick=append('7')>7</button>
