@@ -1,0 +1,9 @@
+#warriorPicture {
+    width: 250px;
+    height: 400px;
+}
+#btn {
+    font-weight: bold;
+    font-size: 2em;
+    padding: 5px 10px;
+}
