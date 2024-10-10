@@ -8,6 +8,7 @@ body {
     flex-direction: column;
     align-items: center;
     color: rgba(14, 14, 14, 0.9);
+    background-color: #f8f8f8;
 }
 
 h1 {
@@ -34,8 +35,21 @@ h1 {
 
 .result {
     font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
 .resultDisplay {
     font-size: 7.5em;
+    margin-bottom: 10px;
+}
+
+.scoreDisplay {
+    font-size: 2em;
+}
+
+.greenText, .playerScoreDisplay{
+    color: #31e631;
+}
+.redText, .computerScoreDisplay {
+    color: #f42727;
 }
