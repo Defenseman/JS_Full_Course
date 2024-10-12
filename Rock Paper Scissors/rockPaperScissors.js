@@ -28,8 +28,8 @@ function playGame(playerChoice) {
                 break
         }
     }
-    playerResult.textContent = `PLAYER ${playerChoice}`;
-    computerResult.textContent = `COMPUTER ${computerChoice}`;
+    playerResult.textContent = `PLAYER: ${playerChoice}`;
+    computerResult.textContent = `COMPUTER: ${computerChoice}`;
     resultDisplay.textContent = result
 
     resultDisplay.classList.remove('greenText', 'redText')
